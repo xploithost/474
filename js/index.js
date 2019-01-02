@@ -1,4 +1,4 @@
-var ICON_SIZE = 150;
+var ICON_SIZE = 155;
 var PADDING = 20;
 var model = {
   cursor: {
@@ -6,13 +6,13 @@ var model = {
     y: 0
   },
   columns: {
-	 "QUICK": {
+	 "4.74 HOST": {
       index: 0,
-      title: "QUICK",
+      title: "HEN",
       selectedIndex: 0,
       active: false,
-      icon: 'style',
-      items: [{ title: "VTX HEN", desc: "Inc: self spawn & usermode printf to klog patches", version: "1.8 by Zecoxao", active: false, icon: "lock", expage: "payloads/vtxhenzecomod.html" }, { title: "BINLOADER", desc: "Enable only BIN LOADER function on port:9020", version: "1.7 by OpenOrbisTeam", active: false, icon: "send", expage: "payloads/binloader.html" }, { title: "VTX DUMPER", desc: "Dump disc/PSN games to USB: with/without patches, merged/unmerged", version: "1.8 by xVortex", active: false, icon: "archive", expage: "payloads/vtxdump.html"}, { title: "FTP+R/W", desc:"Starts an ftp server with full R/W on all 16 partitions of your PS4.", version: "1.0 by Lightningmods", active: false, icon: "warning", expage: "payloads/ftprw.html"}]
+      icon: 'gamepad',
+      items: [{ title: "HEN 4.74 ", desc: "Inc: Homebrew enabler self spawn & usermode printf to klog patches", version: "4.74 by Zecoxao", active: false, icon: "lock", expage: "payloads/PS4Brew4.74.html" }, { title: "BINLOADER", desc: "Enable only BIN LOADER function on port:9020", version: "1.7 by OpenOrbisTeam", active: false, icon: "send", expage: "payloads/binloader.html" }, { title: "VTX DUMPER", desc: "Dump disc/PSN games to USB: with/without patches, merged/unmerged", version: "1.8 by xVortex", active: false, icon: "archive", expage: "payloads/vtxdump.html"}, { title: "FTP+R/W", desc:"Starts an ftp server with full R/W on all 16 partitions of your PS4.", version: "1.0 by Lightningmods", active: false, icon: "warning", expage: "payloads/ftprw.html"}]
     },
     "HEN 4.74": {
       index: 1,
