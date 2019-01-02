@@ -1,17 +1,9 @@
-# Created by @DEFAULTDNB And @LEEFUL74
-
-# Mod by @84Ciss
-
-# https://ciss84.github.io/HOSTv1.2.84Ciss.github.io/index.html
-
-![Alt text](https://github.com/ciss84/HOST.84Ciss.github.io/blob/master/Capture.PNG?raw=true "Title")
+https://xploithost.github.io/474/
 
 # Changelog Mods
 - Ajout de la détection de la version du webkit
 - Ajout de hostpkg by scorpion
-- Modification du theme
-- 
--
+- Modification du theme- -
 -
 - mise a jour pour le cache 100% fontionnelle
 # Changelog v1.5.2
