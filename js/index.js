@@ -30,16 +30,8 @@ var model = {
       icon: "backup",
       items: [{ title: "VTX DUMPER", desc: "Dump disc/PSN games to USB: with/without patches, merged/unmerged", version: "1.8 by xVortex", active: false, icon: "archive", expage: "payloads/vtxdump.html"},{title: "DISC DUMP", desc:"Copy content from disc to USB", version: "1.0 by Stooged", active: false, icon: "eject", expage: "payloads/discdump.html"},{title: "PKG BACKUP", desc:"Copy PKG files back to USB easily", version: "2.0 by Stooged", active: false, icon: "redo", expage: "payloads/pkgbackup.html"},{ title: "DB SG BACKUP", desc:"Back up your game saves and important databases", version:"3.0 by Stooged", active: false, icon: "save", expage: "payloads/dbsg.html" }, { title: "DB RESTORE", desc:"Restore your backed up databases", version: "2.0 by Stooged", active: false, icon: "publish", expage: "payloads/dbrestore1.html" }, { title: "DB RESTORE UNDO", desc:"Undo an accidental DB restoration", version: "2.0 by Stooged modded by Leeful", active: false, icon: "delete", expage: "payloads/dbrestoreUNDO1.html" },{title: "APPTOUSB", desc:"Specify mount point and move games to external EXFAT USB for extra storage", version: "4.0 by Stooged", active: false, icon: "storage", expage: "payloads/apptousb.html"}, { title: "APPTOUSB ALT", desc:"Like AppToUsb but purely for USB1", version: "1.0 mod by Jakkal", active: false, icon: "dns", expage: "payloads/apptousb1alt.html"}, { title: "USB FAKE PACKAGES", desc:"An alternative based on pkg2usb by SiSTRO and AppToUsb by Stooged", version: "1.1b by Specialfood", active: false, icon: "usb", expage: "payloads/usbfpkgs.html" }, { title: "DUMPER+AUTH", desc:"Experimental APP + AUTH dumper", version: "0.1(Zer0xFF)", active: false, icon: "gradient", expage: "payloads/dumpauth.html"},]
     },
-    "SYSTEM": {
-	  index: 3,
-      title: "SYSTEM",
-      selectedIndex: 0,
-      active: false,
-      icon: "home",
-	  items: [{ title: "AUTH INFO DUMPER", desc:"Dumps auth_info.log. Requires exFAT formatted USB.", version: "1.0 by Stooged", active: false, icon: "details", expage: "payloads/authdump.html" }, { title: "EVERSION", desc:"Dumps your kernel to USB. Cross-compatible with 4.05-5.05 OFW", version: "1.3 by CelesteBlue", active: false, icon: "memory", expage: "payloads/everkdump.html" }, { title: "KERNEL DUMPER", desc:"Dumps your kernel to USB", version: "2.0 by Stooged", active: false, icon: "work", expage: "payloads/kdumper.html" }, { title: "FS DUMPER", desc:"Dumps your consoles file system to USB", version: "1.0 by Stooged", active: false, icon: "pageview", expage: "payloads/fsdumper.html" }]
-	},
   "TOOLS": {
-      index: 4,
+      index: 3,
       title: "TOOLS",
       selectedIndex: 0,
       active: false,
@@ -47,23 +39,23 @@ var model = {
       items: [{title: "PS4REN", desc:"Remote Play Enabler, simulates IDU mode", version: "1.0 by SiSTRO", active: false, icon: "tablet", expage: "Mods/GTA/PS4REN.html" },{title: "SAVE MOUNTER", desc:"No need for save wizard!", version: "1.1 by Chendochap", active: false, icon: "folder", expage: "payloads/savemounter.html" },{ title: "ORBISAFR", desc:"Application file redirector for game modding", version: "1.0 by TheoryWrong", active: false, icon: "layers", expage: "payloads/orbisafr.html" },{ title: "VR ENABLER", desc:"Enables VR headset even after HEN has been run", version: "1.0 by Stooged", active: false, icon: "visibility", expage: "payloads/vr.html" }, { title: "VTX FTP", desc: "Start an ftp server and connect to your PC to your PS4", version: "1.3 by xVortex", active: false, icon: "wifi", expage: "payloads/vtxftp.html"}, { title: "FTP+R/W", desc:"Starts an ftp server with full R/W on all 16 partitions of your PS4.", version: "1.0 by Lightningmods", active: false, icon: "warning", expage: "payloads/ftprw.html" }, { title: "REACTPSPLUS", desc:"Turn your consoles RTC back to play expired PSPLUS games", version: "2012 edition by Zer0xFF", active: false, icon: "restore", expage: "payloads/react.html" }, { title: "UNREACTPSPLUS", desc:"Turn your consoles RTC back to 2018", version: "2018 edition by Zer0xFF", active: false, icon: "update", expage: "payloads/unreact.html" }, { title: "REACTPSPLUS", desc:"Change your consoles RTC to whatever you want", version: "1.0 by Zer0xFF mod by Leeful", active: false, icon: "timelapse", expage: "payloads/reactloader.html" }]
     },
 	"CHEATS": {
-      index: 8,
+      index: 4,
       title: "CHEATS",
       selectedIndex: 0,
       active: false,
       icon: "search",
       items: [{ title: "MEMAPI", desc:"Server, debugger and library tools", version: "1.00 by McCaulay", active: false, icon: "subject", expage: "payloads/memapi.html" }, { title: "IH RTM EDITOR", desc:"Cheat tool with RTM functions", version: "1.0.0.0 by Intention Hackers", active: false, icon: "dvr", expage: "payloads/ihrtm.html" },{ title: "COMMUNITY TRAINER", desc:"Community driven cheat tool", version: "1.0.2.0 by DeathRGH", active: false, icon: "comment", expage: "payloads/community.html" }, { title: "PS4 TRAINER", desc:"Game trainer tool for cheating", version: "1.4.91.113 by Tylermods", active: false, icon: "code", expage: "payloads/tylermods.html" }, { title: "JKPATCH", desc:"RPC server for finding cheats", version: "1.0 by XEMIO", active: false, icon: "timeline", expage: "payloads/jkpatch.html" }, { title: "DEATHRGH", desc:"Cheat toolbox with peek/poke and notifications", version: "1.6.0.0 by DeathRGH", active: false, icon: "attachment", expage: "payloads/deathrgh.html" }, { title: "PS4 CHEATER", desc:"Tool to help find and implement cheats", version: "1.4.7 by Chendochap", active: false, icon: "create", expage: "payloads/cheater.html" }, { title: "PS4API SERVER", desc:"Allows control of game memory for RTE/RTM tools", version: "1.0 by Helloitu", active: false, icon: "flag", expage: "payloads/ps4api.html" }, { title: "PS4API SERVER", desc:"Allows control of game memory for RTE/RTM tools", version: "1.1 by Bisoon", active: false, icon: "transform", expage: "payloads/ps4apibisoon.html" },{title:"DEBUGWATCH", desc:"Full featured debugging utility", version: "1.0.0.0 by Golden", active: false, icon: "watch", expage: "Mods/GTA/Debugwatch.html" },{title:"PLAYENGINE", desc:"Scan & edit PS4 process memory", version: "2.0 by EpicFail78", active: false, icon: "traffic", expage: "Mods/GTA/Playengine.html" }]
     },
-  "GTAV MENUS": {
-      index: 9,
-      title: "GTA MENUS",
+  "GTA V MENUS": {
+      index: 5,
+      title: "GTA V MENUS",
       selectedIndex: 0,
       active: false,
       icon: "tune",
-      items: [{title: "LOTUS 127 ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "1.01 by 0x199", active: false, icon: "spa", expage: "Mods/GTA/GTA_Lotus127.html" },{title: "NOTYOURDOPES 127 ~ [R1 + ⇩]", desc:"GTAV mod menu for EU/US game version 1.27", version: "1.0 by Vicodin10", active: false, icon: "casino", expage: "Mods/GTA/GTA_NotYourDopes127.html" }, { title: "LTSMENU 127 ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "1.0 by CMTFrosty (LastTeamStanding)", active: false, icon: "group", expage: "Mods/GTA/GTA_LTS127.html" }, { title: "NOTANOTHERMENU ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "0.1 by David1337hax", active: false, icon: "redeem", expage: "Mods/GTA/GTA_NotAnother.html" }, { title: "NOTANOTHERMENU 127  ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "0.2 by David1337hax", active: false, icon: "redeem", expage: "Mods/GTA/GTA_NotAnother127.html" }, { title: "AP II INTENSE V2 ~ [R1 + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.1 by EROOTIIK", active: false, icon: "extension", expage: "Mods/GTA/GTA_Intense.html" }, { title: "AP II INTENSE V2 1.27 ~ [R1 + □]", desc:"GTAV mod menu for EU game version 1.27", version: "1.5 by EROOTIIK", active: false, icon: "extension", expage: "Mods/GTA/GTA_Intense127.html" }, { title: "LAMANCE ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "0.8 by David1337hax", active: false, icon: "stars", expage: "Mods/GTA/GTA_Lamance.html" }, { title: "LAMANCE 1.27 ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "0.8 by David1337hax", active: false, icon: "stars", expage: "Mods/GTA/GTA_Lamance127.html" }, { title: "WILDEMODZ ~ [⇦ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.1 by Wildemodz", active: false, icon: "accessibility", expage: "Mods/GTA/GTA_WildeModz.html" }, { title: "WILDEMODZ 127 ~ [⇦ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "1.2 by Wildemodz", active: false, icon: "accessibility", expage: "Mods/GTA/GTA_WildeModz127.html" }, { title: "TEAM PSYCH0S ~ [⇦ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.0 by AlFaMoDz", active: false, icon: "build", expage: "Mods/GTA/GTA_Psych0s.html" }, { title: "ARABICGUY ~ [L1 + R1]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.1 by RF0oDxM0Dz", active: false, icon: "face", expage: "Mods/GTA/GTA_ArabicGuy.html"}, { title: "TRAINER ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.0 by David1337hax", active: false, icon: "shop", expage: "Mods/GTA/GTA_Trainer.html"}]
+      items: [{title: "SOON ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "SOON", active: false, icon: "spa", expage: "Mods/GTA/GTA_Lotus127.html" },{ title: "WILDEMODZ ~ [⇦ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.1 by Wildemodz", active: false, icon: "accessibility", expage: "Mods/GTA/GTA_WildeModz.html" }, { title: "WILDEMODZ 127 ~ [⇦ + □]", desc:"GTAV mod menu for EU/US game version 1.27", version: "1.2 by Wildemodz", active: false, icon: "accessibility", expage: "Mods/GTA/GTA_WildeModz127.html" }, { title: "TEAM PSYCH0S ~ [⇦ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.0 by AlFaMoDz", active: false, icon: "build", expage: "Mods/GTA/GTA_Psych0s.html" }, { title: "ARABICGUY ~ [L1 + R1]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.1 by RF0oDxM0Dz", active: false, icon: "face", expage: "Mods/GTA/GTA_ArabicGuy.html"}, { title: "TRAINER ~ [⇨ + □]", desc:"GTAV mod menu for EU/US game version 1.00", version: "1.0 by David1337hax", active: false, icon: "shop", expage: "Mods/GTA/GTA_Trainer.html"}]
     },
 	"OTHER MENUS": {
-      index: 10,
+      index: 6,
       title: "OTHER MENUS",
       selectedIndex: 0,
       active: false,
@@ -71,7 +63,7 @@ var model = {
       items: [{ title: "THE LAST OF US 1.08 DEBUG MENU", desc:"[L3+Touchpad(L)]=Quick Menu, [L3+Touchpad(R)]=Dev Menu, [L3+R3]=Fly", version: "2.0 by Vicodin10", active: false, icon: "accessibility", expage: "Mods/GTA/TLOUR.html" }, { title: "UNCHARTED 4 1.00/1.18/1.32 DEBUG MENU", desc:"[L3+Start]=Fav Menu, [L3+Touchpad(L)]=Quick Menu, [L3+Touchpad(R)]=Dev Menu, [L3+R3]=Fly", version: "2.0 by Vicodin10", active: false, icon: "exposure", expage: "Mods/GTA/UC4.html" }, { title: "UNCHARTED TLL 1.00 DEBUG MENU", desc:"[L3+Start]=Fav Menu, [L3+Touchpad(L)]=Quick Menu, [L3+Touchpad(R)]=Dev Menu, [L3+R3]=Fly", version: "2.0 by Vicodin10", active: false, icon: "motorcycle", expage: "Mods/GTA/UCTLL.html" } ]
 	 },
 	"LAN": {
-      index: 11,
+      index: 7,
       title: "LAN",
       selectedIndex: 0,
       active: false,
@@ -79,7 +71,7 @@ var model = {
       items: [{ title: "BO3 COD:ONLINE", desc:"Play BO3 LAN games online in private servers", version: "1.0 by TheoryWrong", active: false, icon: "language", expage: "Mods/codonline/BO3.html" }]
 	},  
 	"MEDIA": {
-      index: 12,
+      index: 8,
       title: "MEDIA",
       selectedIndex: 0,
       active: false,
@@ -87,7 +79,7 @@ var model = {
       items: [{title: "MP4PLAYER", desc:"Media player for MP4 movies over network", version: "1.0 by DEFAULTDNB", active: false, icon: "airplay", expage: "Utility/player/playerloader.html" }, {title: "MP3PLAYER", desc:"Audio player for music files over network", version: "COMING SOON by DEFAULTDNB", active: false, icon: "audiotrack" }]
 	},
 	"CACHE": {
-      index: 13,
+      index: 9,
       title: "CACHE",
       selectedIndex: 0,
       active: false,
@@ -95,7 +87,7 @@ var model = {
       items: [{ title: " CACHE xproject page", desc:"Cache X-Project to PS4 web browser for offline use disconnect from internet after install", version: "1.0 by Al-Azif ,enter index.html after web page link to load page offline through browser", active: false, icon: "weekend", expage: "payloads/xmbcache.html" }, { title: "USB CACHE INSTALL", desc:"Installs an ApplicationCache.db from USB for offline use", version: "10.0 by Stooged", active: false, icon: "beenhere", expage: "payloads/usbcacheinstall.html" }, { title: "CACHE INSTALL", desc:"Installs an ApplicationCache.db for offline use", version: "10.0 by Stooged", active: false, icon: "book", expage: "payloads/cacheinstall.html" }, { title: "APPLICATION CACHE", desc:"Installs an ApplicationCache.db that is a modified version of Al-Azif's exploit host", version: "2.0 by Hotdogwithmustard", active: false, icon: "loyalty", expage: "payloads/applicationcache.html" }, { title: "HISTORY BLOCKER", desc:"Toggle auto loading the last page used in webbrowser", version: "2.0 by Stooged", active: false, icon: "bookmarks", expage: "payloads/history.html" }]
 	},
 	"PKG": {
-      index: 14,
+      index: 10,
       title: "INSTALL PKG",
       selectedIndex: 0,
       active: false,
@@ -103,7 +95,7 @@ var model = {
       items: [{ title: "HOST PKG", desc:"RPI-GUI install pkgs to your web browser for offline use", version: "WEB GUI by Sc0rpion 1.0 ", active: false, icon: "weekend", expage: "Utility/rpigui/RPILOADER.html" }]
 	},
 	"ABOUT": {
-      index: 15,
+      index: 11,
       title: "ABOUT",
       selectedIndex: 0,
       active: false,
