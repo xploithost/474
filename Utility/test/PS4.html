@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://fiddle.jshell.net/n1uevm30/32/show/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>PS4Breacher</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <a href="./6.02/6.02.html">
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+  <style type="text/css">
+    /*
+ *   CSSReset Styles
+ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+ *   PS4Breacher Styles
+ */
+
+html,
+body {
+    background: #000000;
+    height: 100%;
+}
+
+h1 {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    text-shadow: 0px 0px 25px #DAA520;
+}
+
+h2 {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-shadow: 0px 0px 25px #DAA520;
+}
+
+h3 {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: 0px 0px 25px #DAA520;
+}
+
+h4 {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: 0px 0px 25px #DAA520;
+}
+
+h5 {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: 0px 0px 25px #DAA520;
+}
+
+.info {
+    overflow: hidden;
+    position: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 45px;
+    font-family: sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 174px;
+    bottom: 0px;
+    width: 100%;
+    background: #000000;
+}
+
+.loader {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    margin: -75px 0 0 -75px;
+    border: 10px solid #800000;
+    border-radius: 50%;
+    border-top: 10px solid gold;
+    border-left: 10px solid gold;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    -webkit-animation: spin 1s linear infinite;
+}
+
+.loader-text {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 25px #DAA520;
+    top: 55%;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    position: absolute;
+    -webkit-animation: flash-fade 2s linear infinite;
+}
+
+.failed-text {
+    display: none;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 25px #DAA520;
+    top: 10%;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    position: absolute;
+    -webkit-animation: flash-fade 2s linear infinite;
+}
+
+.failed-info {
+    color: #DAA520;
+    display: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    top: 23%;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    position: absolute;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes flash-fade {
+    0% {
+        text-shadow: 0px 0px 25px #000000;
+    }
+    25% {
+        text-shadow: 0px 0px 25px #856514;
+    }
+    50% {
+        text-shadow: 0px 0px 25px #DAA520;
+    }
+    75% {
+        text-shadow: 0px 0px 25px #856514;
+    }
+    100% {
+        text-shadow: 0px 0px 25px #000000;
+    }
+}
+
+#wrapper {
+    background: -webkit-linear-gradient(top, #000000 0%, #45484d 100%);
+    background: linear-gradient(to bottom, #000000 0%, #45484d 100%);
+    margin: 0 auto -20px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 99.5%;
+}
+
+#header {
+    border-bottom: 2px dashed #DAA520;
+    border-radius: 0px 0px 50px 50px;
+    color: #DAA520;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+#navigation {
+    top: 134px;
+    text-align: center;
+    position: relative;
+}
+
+#navigation input {
+    color: #DAA520;
+    background: black;
+    border: 2px solid gold;
+    padding: 5px 10px 5px 10px;
+}
+
+#main {
+    border-top: 2px dashed #DAA520;
+    border-radius: 0px 0px 50px 50px;
+    top: 172px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+#main .text-padding {
+    color: #ffffff;
+    padding: 30px;
+    width: 75%;
+    height: 100%;
+}
+
+#footer {
+    border-top: 2px dashed #DAA520;
+    background: black;
+    bottom: 0px;
+    color: #DAA520;
+    text-align: center;
+    position: fixed;
+    width: 99.5%;
+}
+
+  </style>
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    
+//
+// utils.log.js
+//
+// global vars  
+var _log0, _log, _log_cnt = 0,
+    _dview;
+
+window.onerror = function(msg, url, line, column, error) {
+    var txt = msg + "\n\n" + error;
+
+    if (url)
+        txt = "url:" + url + "\n" + msg + "\nL:" + line + " C:" + column + "\n\n" + error;
+
+    if (error !== undefined)
+        txt += "\n" + error.stack;
+
+    logAdd(txt);
+};
+
+// prints log messages
+console.log = function(input) {
+    _log_cnt++;
+    var msg = "[" + _log_cnt + "]: " + input;
+
+    $.ajax({
+        url: 'log.jss',
+        type: 'post',
+        data: {
+            msg
+        },
+        async: false
+    });
+
+    if (!_log0) {
+        _log0 = document.getElementById("log");
+        if (!_log0)
+            return;
+    }
+
+    if (!_log) {
+        _log = document.createElement("div");
+
+        if (_log0.hasChildNodes())
+            _log0.insertBefore(_log, _log0.firstChild);
+        else
+            _log0.appendChild(_log);
+    }
+
+    var div = document.createElement("div");
+    div.innerHTML = msg;
+    _log.appendChild(div);
+};
+
+var logAdd = console.log;
+console.error = console.log;
+
+function logClear() {
+    document.getElementById("log").innerHTML = '';
+}
+
+//
+// utils.js
+//
+function success() {
+    document.getElementById('loader-wrapper').style.display = 'none';
+    //logAdd('Successful!');
+}
+
+function failure(info) {
+    document.getElementById('loader-wrapper').style.display = 'block';
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('loader-text').style.display = 'none';
+    document.getElementById('failed-text').style.display = 'block';
+    document.getElementById('failed-info').style.display = 'block';
+    if (info === undefined) {
+        info = 'No Information Available!'
+        document.getElementById('failed-info').innerHTML = info;
+    } else
+        document.getElementById('failed-info').innerHTML = info;
+    $('body').addClass('stop-scrolling');
+    logAdd(info + '\n');
+}
+
+function getEnvironmentInfo() {
+    var s = '<br>' + new Date().toTimeString() + ' - ';
+
+    s += navigator.userAgent;
+    s += ' - (' + navigator.platform + ')<br>';
+
+    return s;
+}
+
+
+
+</script>
+
+</head>
+<body onload="init();">
+  
+
+
+    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PS4 Breacher - To breach the unbreachable!</title>
+    
+
+    
+        <div id="wrapper">
+            <div id="header">
+                <h1>PS4 Breacher</h1>
+                <h2>To breach the unbreachable!</h2>
+            </div>
+            <div id="navigation">
+                <input type="button" onclick="location.reload();" value="Reload Page">
+                <input type="button" onclick="success();" value="Test Success">
+                <input type="button" onclick="failure(&quot;This is just a jsfiddle failure test!&quot;);" value="Test Failure">
+            </div>
+            <div id="main">
+                <div id="loader-wrapper">
+                    <div id="loader" class="loader"></div>
+                    <div id="loader-text" class="loader-text">Loading</div>
+                    <div id="failed-text" class="failed-text">FAILURE</div>
+                    <div id="failed-info" class="failed-info"></div>
+                </div>
+                <div class="text-padding">
+                    <div id="log">
+[1]: Starting System.<br>
+[2]: Starting Userland Breach.<br>
+[3]: Checking 16 times for a leak...<br>
+[4]: Checking validator: 0x01b6780a<br>
+[5]: Check #1<br>
+[6]: Checking validator: 0x0716e635<br>
+[7]: Check #2<br>
+[8]: Found leak of 0x0716e635 @ 0x0adc9660<br>
+[9]: Building object #1<br>
+[10]: Building object #2<br>
+[11]: Attempting leak...<br>
+[12]: validator=0xaf68<br>
+[13]: Allocating...<br>
+[14]: Checking...<br>
+[15]: Found data of size: 4114<br>
+[16]: data=["0xaf68","0x10000","0xbc72080","0x2","0xbc83360","0x2","0xbc83320","0x2","0xaf68","0x10000","0xbc72080","0x2"]<br>
+[17]: Building object #3<br>
+[18]: Building object #4<br>
+[19]: Successfully exploited WebKit!<br>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <script>
+                    document.write(getEnvironmentInfo());
+
+                </script><br>13:42:26 GMT+0100 (heure normale d’Europe centrale) - Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36 - (Win32)<br>
+                <h3>Developed by Monstro</h3>
+                <h4>(irc.xmpp.land/+6697)</h4><br>
+            </div>
+        </div>
+    
+
+
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "n1uevm30"
+      }], "*")
+    }
+  </script>
+
+
+</body></html>

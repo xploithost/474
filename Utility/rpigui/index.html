@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://www.gamesandconsoles.org/rpi/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			
+		<title>PS4 Remote Package Installer GUI</title>
+		<link href="https://www.gamesandconsoles.org/rpi/icons/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link rel="apple-touch-icon" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://www.gamesandconsoles.org/rpi/icons/apple-touch-icon-152x152.png">
+				<style>
+			body {
+				padding: 10px;
+			background: url(./js/font.gif) no-repeat;
+			background-size: auto; 
+			}
+			.content-title {
+			padding: 0px 20px;
+			margin: 1px;
+			background: #003263;
+			color: #fff;
+			border: 1px solid #6392b1;
+			}
+			.contentblock {
+			margin: 10px;
+			}
+			.flex-container {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: row wrap;
+			justify-content: space-around;
+			}
+			.flex-item {
+			padding-top: 20px;
+			width: 350px;
+			height: 200px;
+			}
+			select {
+			width: 350px; /* Ширина списка в пикселах */
+			}
+			.credits{overflow:hidden;left:50%;font-size:16px;font-family:sans-serif;text-align:center;}
+		</style>
+		<script type="text/javascript">
+			function WhereYouWillSend(a){document.getElementById('url').value=a;document.getElementById('url').size=50;};
+		</script>
+	</head>
+	<body>
+		<div class="content-title">
+			<center>
+				<h1>PS4 Remote Package Installer GUI v0.1</h1>
+			</center>
+		</div>
+		<ul class="flex-container">
+			<li class="flex-item">
+				<b>Install PGK</b>
+				<form action="https://www.gamesandconsoles.org/rpi/index.php" method="POST">
+					<p>ip ps4: <input type="text" name="ip" required="" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" value=""></p>
+					<p>url pkg (http://): <input type="text" id="url" size="" name="package" value="http://"></p>
+					<select onchange="WhereYouWillSend(this.value)">
+							 <option value="http://" selected="">Выберите *.PKG для установки или введите URL</option></select>					<input type="hidden" name="procedure" value="install">
+					<p><input type="submit"></p>
+				</form>
+			</li>
+			<li class="flex-item">
+				<b>Status install</b>
+				<form action="https://www.gamesandconsoles.org/rpi/index.php" method="POST">
+					<p>ip ps4: <input type="text" name="ip" required="" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" value=""></p>
+					<p>task_id: <input type="text" name="task_id" value=" ">
+						<input type="hidden" name="procedure" value="get_task_progress">
+					</p><p><input type="submit"></p>
+				</form>
+			</li>
+		</ul>
+		Укажите IP и URL для установки или task_id для получения статуса установки<br><br>Last install <em>Game</em>: <b>A Way Out </b>, <em>task_id</em>: <b>106</b>
+		<div id="footer" class="credits">
+			<center>
+				<br>
+				<ul style="list-style:none;padding-left:0">
+					<li>Developers</li>
+					<li><a link="0000FF" href="https://github.com/flatz">Remote Package Installer - <b>flatz</b></a></li>
+					<li><a style="color: rgb (255, 255, 255)" href="https://github.com/Sc0rpion">WEB GUI - <b>Sc0rpion</b></a></li>
+				</ul>
+			</center>
+		</div>
+
+
+</body></html>
