@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://zecoxao.github.io/ -->
+<html><head>
+  <title>PS4Brew 4.74</title>
+  <link rel="stylesheet prefetch" href="exploit.css">
+</head>
+<body>
+<div id=loader class=loader><div class=ib2>HEN 4.74</div><div class=ib2>&nbsp;L</div><div class=loaderO></div><div class=ib2>ADING...</div></div>
+<div id=done class=done style=display:none>HEN 4.74 LOADED<br><div class=ib>PRESS</div><div id=PSBUTTON></div><div class=ib>TO EXIT</div></div>
+<div id=fail class=info style=display:none>HEN 4.74 FAILED</div>
+  <script>
+    window.didload = 0;
+    window.didpost = 0;
+
+    window.onload = function () {
+      window.didload = 1;
+      if (window.didpost == 1)
+        setTimeout(window.stage2, 1500);
+    }
+    window.postExpl = function () {
+      window.didpost = 1;
+      if (window.didload == 1)
+        setTimeout(window.stage2, 1500);
+    }
+
+    function allset() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("allset").style.display = "block";
+    }
+
+    function awaitpl() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("awaiting").style.display = "block";
+    }
+
+    function fail(info) {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("fail").style.display = "block";
+    }
+  </script>
+
+  <div id="loader" class="loader"></div>
+
+  <div id="awaiting" class="info" style="display:none;">
+    Awaiting Payload...
+  </div>
+
+  <div id="allset" class="info" style="display:none;">
+    You're all set!
+  </div>
+
+  <div id="fail" class="info" style="display:none;">
+    Something went wrong :(
+  </div>
+
+  <div id="badfw" class="info" style="display:none;">
+    Only PS4 firmware 4.74 is supported!
+  </div>
+
+  <div id="footer" class="credits">
+    <ul style="list-style: none;padding-left:0">
+      <li>Bug from qwertyoruiopz</li>
+      <li>PS4HEN thanks to flatz, idc, CelesteBlue, zecoxao, wildcard, SocraticBliss, PabloGoat</li>
+      <li>Implementation by Specter</li>
+      <li>2018 PS4NoBD Team</li>
+    </ul>
+  </div>
+
+  <script src="./PS4Brew4.74/rop.js"></script>
+  <script src="./PS4Brew4.74/syscalls.js"></script>
+  <script src="./PS4Brew4.74/expl.js"></script>
+  <script src="./PS4Brew4.74/userland.js"></script>
+  <script src="./PS4Brew4.74/homebrew.js"></script>
+  <script src="./PS4Brew4.74/mira.js"></script>
+  <pre id="console"></pre>
+
+
+</body></html>
